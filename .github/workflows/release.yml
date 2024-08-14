@@ -19,6 +19,8 @@ jobs:
         cache: maven
     - name: Release
       uses: qcastel/github-actions-maven-release@v1.12.41
+      env:
+        JAVA_HOME: $JAVA_HOME_17_x86'.
       with:
         release-branch-name: "main"
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
